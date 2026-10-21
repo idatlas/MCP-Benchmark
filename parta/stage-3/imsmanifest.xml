@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="id-d4c9fed8-8d2e-4ee3-ac94-c439d510d5c5_1792543831820" version="1.3" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 4th Edition</schemaversion>
+    <lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd">
+      <general>
+        <title>
+          <string language="en-US">PlatformConstructor</string>
+        </title>
+        <language>en-US</language>
+      </general>
+      <technical>
+        <format>text/html</format>
+        <requirement>
+          <orComposite>
+            <type>
+              <source>LOMv1.0</source>
+              <value>browser</value>
+            </type>
+            <name>
+              <source>LOMv1.0</source>
+              <value>any</value>
+            </name>
+          </orComposite>
+        </requirement>
+        <otherPlatformRequirements>
+          <string language="en">HTML5-compliant web browser</string>
+        </otherPlatformRequirements>
+      </technical>
+      <educational>
+        <interactivityType>
+          <source>LOMv1.0</source>
+          <value>active</value>
+        </interactivityType>
+        <interactivityLevel>
+          <source>LOMv1.0</source>
+          <value>very high</value>
+        </interactivityLevel>
+        <intendedEndUserRole>
+          <source>LOMv1.0</source>
+          <value>learner</value>
+        </intendedEndUserRole>
+        <context>
+          <source>LOMv1.0</source>
+          <value>school</value>
+        </context>
+        <language>en-US</language>
+      </educational>
+      <rights>
+        <cost>
+          <source>LOMv1.0</source>
+          <value>no</value>
+        </cost>
+        <copyrightAndOtherRestrictions>
+          <source>LOMv1.0</source>
+          <value>License: 'Creative Commons Attribution-Non commercial'</value>
+        </copyrightAndOtherRestrictions>
+      </rights>
+    </lom>
+  </metadata>
+  <organizations default="org-d4c9fed8-8d2e-4ee3-ac94-c439d510d5c5_1792543831820">
+    <organization identifier="org-d4c9fed8-8d2e-4ee3-ac94-c439d510d5c5_1792543831820">
+      <title>When Thunder Roars: Lightning Safety for Vegetation Crews (Oct 2026 build)</title>
+      <item identifier="item-d4c9fed8-8d2e-4ee3-ac94-c439d510d5c5_1792543831820" identifierref="resource_1">
+        <title>When Thunder Roars: Lightning Safety for Vegetation Crews (Oct 2026 build)</title>
+        <imsss:sequencing>
+          <imsss:minimumNormalizedMeasure>0.8</imsss:minimumNormalizedMeasure>
+        </imsss:sequencing>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="resource_1" type="webcontent" href="driver/index.html?id=2b6a9679-9bc3-40b1-a23b-394b2976bf88" adlcp:scormType="sco">
+      <file href="index.html"/>
+      <file href="defaultData.js"/>
+      <file href="static/css/bundle.146df8b1.css"/>
+      <file href="static/css/code-mirror.4b903c00.chunk.css"/>
+      <file href="static/css/platform.3ddac877.css"/>
+      <file href="static/css/public.4ebf5bc5.css"/>
+      <file href="static/js/373.981a5ff0.chunk.js"/>
+      <file href="static/js/591.d84c4d9f.chunk.js"/>
+      <file href="static/js/650.9a52d285.chunk.js"/>
+      <file href="static/js/672.e7140b74.chunk.js"/>
+      <file href="static/js/912.b5d27afa.chunk.js"/>
+      <file href="static/js/976.fc709daa.chunk.js"/>
+      <file href="static/js/bundle.e41c2bc8.js"/>
+      <file href="static/js/code-mirror.c2dd289a.chunk.js"/>
+      <file href="static/js/heic2any.b59a335c.chunk.js"/>
+      <file href="static/js/platform.de8e65cd.js"/>
+      <file href="static/js/public.7f614864.js"/>
+      <file href="static/js/reactPlayerDailyMotion.941c88c7.chunk.js"/>
+      <file href="static/js/reactPlayerFacebook.46ba768e.chunk.js"/>
+      <file href="static/js/reactPlayerFilePlayer.61ee4a6b.chunk.js"/>
+      <file href="static/js/reactPlayerKaltura.df662be5.chunk.js"/>
+      <file href="static/js/reactPlayerMixcloud.7b495ee9.chunk.js"/>
+      <file href="static/js/reactPlayerMux.5fd4dfbf.chunk.js"/>
+      <file href="static/js/reactPlayerPreview.e498183c.chunk.js"/>
+      <file href="static/js/reactPlayerSoundCloud.2996d8ee.chunk.js"/>
+      <file href="static/js/reactPlayerStreamable.46ba9795.chunk.js"/>
+      <file href="static/js/reactPlayerTwitch.fe36218a.chunk.js"/>
+      <file href="static/js/reactPlayerVidyard.3a98f6f7.chunk.js"/>
+      <file href="static/js/reactPlayerVimeo.b9325436.chunk.js"/>
+      <file href="static/js/reactPlayerWistia.d0360fa4.chunk.js"/>
+      <file href="static/js/reactPlayerYouTube.72750bc4.chunk.js"/>
+      <file href="static/js/runtime.2fd9937e.js"/>
+      <file href="static/js/wasm-media-encoders.82d8d094.chunk.js"/>
+      <file href="static/media/authLogo.18d5beda3ac932855d18.png"/>
+      <file href="static/media/avatar-1.b467bbcbd90c71aec981.png"/>
+      <file href="static/media/avatar-2.8bf3061a5c8569f2ee85.png"/>
+      <file href="static/media/avatar-3.b0a30358a0776e38567b.png"/>
+      <file href="static/media/avatar-4.0cba16c99e59ed0bb873.png"/>
+      <file href="static/media/avatar-5.6926ef064c85876bd1d7.png"/>
+      <file href="static/media/avatar-6.6e933864968d7e17ea45.png"/>
+      <file href="static/media/inter-cyrillic-400-normal.89455522650c3fb3654c.woff2"/>
+      <file href="static/media/inter-cyrillic-400-normal.dd21c71421d58232ef03.woff"/>
+      <file href="static/media/inter-cyrillic-500-normal.33a76a7cbcfcb7076534.woff2"/>
+      <file href="static/media/inter-cyrillic-500-normal.72f7a9db87626ca30c76.woff"/>
+      <file href="static/media/inter-cyrillic-600-normal.8609e1b95284125f21cb.woff"/>
+      <file href="static/media/inter-cyrillic-600-normal.fdee7b66c2d88216b75f.woff2"/>
+      <file href="static/media/inter-cyrillic-700-normal.533055ff3700190d8dfa.woff2"/>
+      <file href="static/media/inter-cyrillic-700-normal.9f2de06ca9a7c8458434.woff"/>
+      <file href="static/media/inter-cyrillic-800-normal.9db8aee669b5bb33882d.woff2"/>
+      <file href="static/media/inter-cyrillic-800-normal.a0cb8f734a73e8bf5059.woff"/>
+      <file href="static/media/inter-cyrillic-900-normal.c5c4df448d7389d85c94.woff2"/>
+      <file href="static/media/inter-cyrillic-900-normal.d3290970be81bb43b907.woff"/>
+      <file href="static/media/inter-cyrillic-ext-400-normal.39fbf8d2c4abc46f721f.woff2"/>
+      <file href="static/media/inter-cyrillic-ext-400-normal.818b84180553acc613f3.woff"/>
+      <file href="static/media/inter-greek-400-normal.b412faded087fbcfa4ff.woff"/>
+      <file href="static/media/inter-greek-400-normal.e685387f69602567b1da.woff2"/>
+      <file href="static/media/inter-greek-ext-400-normal.f2ef63e732b18d636044.woff2"/>
+      <file href="static/media/inter-greek-ext-400-normal.fc80974ec6969ee03fd2.woff"/>
+      <file href="static/media/inter-latin-400-normal.2ea1079c0069eb040a52.woff"/>
+      <file href="static/media/inter-latin-400-normal.eca1e21531598d5db58f.woff2"/>
+      <file href="static/media/inter-latin-500-normal.5014db633e71a7741bf5.woff"/>
+      <file href="static/media/inter-latin-500-normal.b7c27c60f848f2083f45.woff2"/>
+      <file href="static/media/inter-latin-600-normal.69a8d1d484967aba2389.woff2"/>
+      <file href="static/media/inter-latin-600-normal.f10265da6bd8d66999ac.woff"/>
+      <file href="static/media/inter-latin-700-normal.1104236696a5d2d1f236.woff2"/>
+      <file href="static/media/inter-latin-700-normal.c73ae7252669254d2588.woff"/>
+      <file href="static/media/inter-latin-800-normal.d2cf8417dfce77f8f2be.woff2"/>
+      <file href="static/media/inter-latin-800-normal.e25d8fa1cf6e38254bbe.woff"/>
+      <file href="static/media/inter-latin-900-normal.06954c913fa69c107e01.woff"/>
+      <file href="static/media/inter-latin-900-normal.111844ddb503252b7554.woff2"/>
+      <file href="static/media/inter-latin-ext-400-normal.210fb826cb25acbd4094.woff2"/>
+      <file href="static/media/inter-latin-ext-400-normal.c616205185f0d3677df9.woff"/>
+      <file href="static/media/inter-vietnamese-400-normal.44c9df135eec470b0ab6.woff2"/>
+      <file href="static/media/inter-vietnamese-400-normal.aaa15d735e3826061950.woff"/>
+      <file href="static/svg/1280px.8a43ef34f907e58fcdc2.svg"/>
+      <file href="static/svg/1440px.e5bf177c4e7761b7070c.svg"/>
+      <file href="static/svg/1600px.c3f86dd2f5e45210a7db.svg"/>
+      <file href="static/svg/2columns.5ef21dc8632cf4e994b5.svg"/>
+      <file href="static/svg/2rows.a785aa7f142d6ff3d999.svg"/>
+      <file href="static/svg/3columns.51eac2aca1b8e6bed256.svg"/>
+      <file href="static/svg/3rows.57874c0a9c807e87ab74.svg"/>
+      <file href="static/svg/940px.65aedc0bb0340ac3fa87.svg"/>
+      <file href="static/svg/absolute.9a7606f7ce3f087a9aee.svg"/>
+      <file href="static/svg/accordion.61c7138bc821d99f29e0.svg"/>
+      <file href="static/svg/accordionIndents.4d89d4f9d83a70a722a8.svg"/>
+      <file href="static/svg/adminLogo.a7ec5f16d9697c676556.svg"/>
+      <file href="static/svg/alert-404.333785d7771b12a0ed3a.svg"/>
+      <file href="static/svg/audio.266950bb42f113fb521a.svg"/>
+      <file href="static/svg/authBg.0d510604995913d82807.svg"/>
+      <file href="static/svg/button.a5a986aa515f234d146a.svg"/>
+      <file href="static/svg/card.882a604d88d86dd644b6.svg"/>
+      <file href="static/svg/chart.1e5d2458d4b2382c1b2c.svg"/>
+      <file href="static/svg/checkbox.32910b86d9179a6dc4e2.svg"/>
+      <file href="static/svg/code.66f331beb5782f6e29a3.svg"/>
+      <file href="static/svg/commentCursor.9d302611d158d9ff6eab.svg"/>
+      <file href="static/svg/companyLogo.0b0408a5e466f116d235.svg"/>
+      <file href="static/svg/componentIndents.1d8904c9fec0204a5ead.svg"/>
+      <file href="static/svg/contentIndents.9114ffa6bd1f1adf92cf.svg"/>
+      <file href="static/svg/courseStructure.ee58b733db197773c236.svg"/>
+      <file href="static/svg/deletedEmployee.2ab94c77b4180fbc12e7.svg"/>
+      <file href="static/svg/divider.a2f7aad224247a36860f.svg"/>
+      <file href="static/svg/embedded.3db5711bbdc01c7fd5ca.svg"/>
+      <file href="static/svg/eye-block.4d308a98d0f74563323c.svg"/>
+      <file href="static/svg/fail.ca5dccac20495e69ea51.svg"/>
+      <file href="static/svg/fail.f32d84891abbed16bb09.svg"/>
+      <file href="static/svg/flex.cfe577234587703a0af5.svg"/>
+      <file href="static/svg/generalFeedback.aa7135ea464f1eba453f.svg"/>
+      <file href="static/svg/grid.faf2dec20f7baf99b3bb.svg"/>
+      <file href="static/svg/grouping.2831d739e09092cb0464.svg"/>
+      <file href="static/svg/hotspot.bbc3a3c81838d46ecc3a.svg"/>
+      <file href="static/svg/iconIndents.94817af04bded7a82a4b.svg"/>
+      <file href="static/svg/illustration-eye-block.750fb1a5f86418d1a0a9.svg"/>
+      <file href="static/svg/image.1772122ca65dae57ce6a.svg"/>
+      <file href="static/svg/imageDemo.ece1d8205670f4d8461b.svg"/>
+      <file href="static/svg/indent_content.d8392f946ac03f84735d.svg"/>
+      <file href="static/svg/indent_tabs.43152c9a92b03de77813.svg"/>
+      <file href="static/svg/indentsHint.11fbfd5d909986af5cb9.svg"/>
+      <file href="static/svg/info.25dd17997ba8c7deca78.svg"/>
+      <file href="static/svg/info.8f81387d75d726996b62.svg"/>
+      <file href="static/svg/labeledGraphic.75c29f046daa622de80a.svg"/>
+      <file href="static/svg/link.04491153c19b23be447d.svg"/>
+      <file href="static/svg/list.3ad3f24222d67fb4e7c3.svg"/>
+      <file href="static/svg/list.84d1da7446aa52682e06.svg"/>
+      <file href="static/svg/logo-full_l.592e7b44540538bef61d.svg"/>
+      <file href="static/svg/logo-full_m.cebd246a529aee59ab22.svg"/>
+      <file href="static/svg/logo.a72f0bffc0f6ec1df33f.svg"/>
+      <file href="static/svg/logoText.93b263076c86bd284e57.svg"/>
+      <file href="static/svg/other-file-20-px.cd11b945c4878d9246ef.svg"/>
+      <file href="static/svg/other-file-40-px.700ca0becdff5fe89ceb.svg"/>
+      <file href="static/svg/pendingEmployee.a1593d9a5751275cc3d0.svg"/>
+      <file href="static/svg/progress.94aa37582dc19461de35.svg"/>
+      <file href="static/svg/quotes.9cb754b080af70025711.svg"/>
+      <file href="static/svg/rectangle.f71d13b530d250793973.svg"/>
+      <file href="static/svg/reflection.417061af633245aa5fc3.svg"/>
+      <file href="static/svg/richText.cc3c2eccf42eb4908ec0.svg"/>
+      <file href="static/svg/sidebar.2a83cb84d3977433f3a1.svg"/>
+      <file href="static/svg/simulator.d435ee1b92b6f8fbe585.svg"/>
+      <file href="static/svg/single_mini.6702ccbf79796c459277.svg"/>
+      <file href="static/svg/slider.72d25ddc0fdb61df0510.svg"/>
+      <file href="static/svg/splitter.98b8915aa8eef0f8d397.svg"/>
+      <file href="static/svg/success.24cb51da3c5b4199c0a2.svg"/>
+      <file href="static/svg/success.afda4aa24c87968b0059.svg"/>
+      <file href="static/svg/table.2c874aef2e7ebe116762.svg"/>
+      <file href="static/svg/tabs.35b03039cb66afc15196.svg"/>
+      <file href="static/svg/test-ranking.2ae6689574f2eba77927.svg"/>
+      <file href="static/svg/test-single-choise.ec06f075c106fb549f4e.svg"/>
+      <file href="static/svg/testFeedback.b04884a26025964cabee.svg"/>
+      <file href="static/svg/testGrouping.4a197c665415db7f6298.svg"/>
+      <file href="static/svg/testInfoEnd.ab5bb50bb570367b1a73.svg"/>
+      <file href="static/svg/testInfoStart.ab5bb50bb570367b1a73.svg"/>
+      <file href="static/svg/testKeyboardInput.3ea3a77c22ebd601b431.svg"/>
+      <file href="static/svg/testMatching.02accf880e3d259f45a5.svg"/>
+      <file href="static/svg/testMultipleChoice.d34404445c60dcc6d0df.svg"/>
+      <file href="static/svg/testResult.66ef576b4a4c2e9ba5ae.svg"/>
+      <file href="static/svg/video.c8785bb3e7d0f15b9b63.svg"/>
+      <file href="templates/04420473-1456-49d8-8c0f-7c8d4233a7a7.png"/>
+      <file href="templates/0f612c00-24d8-480f-bb31-e9db3370c668.png"/>
+      <file href="templates/1d3f4176-6ff3-4574-a7eb-6942870910f0.png"/>
+      <file href="templates/2ba1f776-a343-40bb-878c-7e9926913ece.png"/>
+      <file href="templates/66e33b0f-6311-4247-8b2d-9907d6590aa4.png"/>
+      <file href="templates/78928f33-6313-4e57-937f-7a36338b2387.png"/>
+      <file href="templates/8547fe96-579b-4ef4-8c1e-3ee8a0eb6171.png"/>
+      <file href="templates/956120e5-34a4-45c1-98a3-bef7fc743dad.png"/>
+      <file href="templates/a3480161-cca6-4464-9810-280403b9ae39.png"/>
+      <file href="templates/b1851d86-c383-4618-8433-d012ed280133.png"/>
+      <file href="templates/bba777f5-7bb2-4cbc-8031-0204b682eff5.png"/>
+      <file href="templates/c079151d-4e44-4f12-99de-7fefd56f5704.png"/>
+      <file href="templates/c08cb4e2-0b90-41c0-b454-e076e4026126.png"/>
+      <file href="templates/c9b5ba5a-3b37-430b-bd47-48ef68eee98b.png"/>
+      <file href="templates/e028d260-5f55-4527-9908-9e293e21c753.png"/>
+      <file href="templates/ed4ecc60-e01d-451b-8c4b-0c2bc338ad0b.png"/>
+      <file href="templates/f02d4176-8778-40cd-bb04-fd22674fb959.png"/>
+      <file href="driver/index.html"/>
+      <file href="driver/scorm-driver.umd.js"/>
+    </resource>
+  </resources>
+</manifest>
