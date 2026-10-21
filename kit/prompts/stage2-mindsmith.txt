@@ -1,0 +1,7 @@
+Build a course in Mindsmith from the document lightning-safety.pdf in this folder.
+
+It is for crew leads on outdoor work sites and should take 5 to 10 minutes.
+
+Use scenario-based training, with cases that show consequences and test learners before teaching them. Use active learning, andragogy and the principles of adult learning, and Mayer's multimedia design principles in your design.
+
+Create a new course for this. Don't open, change, or reuse any other course or project in this account.

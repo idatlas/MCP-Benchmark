@@ -1,0 +1,3 @@
+Build this course in Parta from design-brief.md in this folder. The images it names are in images/, and the source document is lightning-safety.pdf. Follow the brief exactly.
+
+Create a new course for this. Don't open, change, or reuse any other course or project in this account.

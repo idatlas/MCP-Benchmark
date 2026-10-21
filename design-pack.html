@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stage 3 Design Pack</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --navy:#1F2A3A; --ink:#2E2E2E; --muted:#5b6472; --line:#e3e6ea; --bg:#ffffff; --tint:#F4F5F7; --yellow:#F2C230; }
+  body { margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; }
+  main { max-width: 820px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { color:var(--navy); font-size: 1.9rem; margin:0 0 8px; }
+  p.lead { color:var(--muted); margin:0 0 28px; }
+  h2 { color:var(--navy); font-size:1.15rem; margin:40px 0 12px; padding-bottom:6px; border-bottom:3px solid var(--yellow); display:inline-block; }
+  a { color:var(--navy); font-weight:600; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap:12px; }
+  .grid a { display:block; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--tint); text-decoration:none; }
+  .grid img { width:100%; aspect-ratio: 16/9; object-fit:cover; display:block; }
+  .grid .icon img { object-fit:contain; padding:10px; box-sizing:border-box; background:#fff; }
+  .grid span { display:block; padding:6px 10px; font-size:.82rem; color:var(--muted); font-weight:500; }
+  pre { background:var(--tint); border:1px solid var(--line); border-radius:10px; padding:14px 16px; white-space:pre-wrap; font-size:.88rem; }
+  .files li { padding:6px 0; }
+  #brief { border-top:1px solid var(--line); margin-top:12px; }
+  #brief table { border-collapse:collapse; width:100%; font-size:.92rem; }
+  #brief th, #brief td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  #brief blockquote { margin:12px 0; padding:8px 16px; background:var(--tint); border-left:4px solid var(--yellow); }
+  #brief h2 { display:block; }
+  .note { color:var(--muted); font-size:.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">← All courses</a></p>
+  <h1>Stage 3 design pack</h1>
+  <p class="lead">Everything the agent got at stage 3 of the MCP benchmark: a nine-screen brief with every word written out, a palette and font, and 14 images with alt text. The same pack went to Evolve, Parta, Coassemble and Mindsmith. Stages 1 and 2 used the fact sheet and the short prompts below.</p>
+
+  <h2>The 14 images</h2>
+  <p class="note">Each one vetted before the test. Click for the full-size file the agent received.</p>
+  <div class="grid" id="images"></div>
+
+  <h2>The prompts</h2>
+  <p class="note">Shown for Evolve. The other tools' prompts are identical except for the tool's name.</p>
+  <div id="prompts"></div>
+
+  <h2>Files</h2>
+  <ul class="files">
+    <li><a href="kit/design-brief.md">design-brief.md</a> <span class="note">(the brief as the agent read it)</span></li>
+    <li><a href="kit/lightning-safety.pdf">lightning-safety.pdf</a> <span class="note">(OSHA and NOAA fact sheet FS-3863, the source for every stage)</span></li>
+    <li><a href="https://github.com/idatlas/MCP-Benchmark/tree/main/kit">Everything on GitHub</a> <span class="note">(prompts for all four tools, images, brief)</span></li>
+  </ul>
+
+  <h2>The brief</h2>
+  <div id="brief"><p class="note">Loading the brief…</p></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+  const imgs = ['00-cover','01-hook','02-morning','03-rumble','04-shelter','05-clearing','06-restoration','07-commitment',
+                'icon-truck','icon-building','icon-trees','icon-pavilion','icon-shed','icon-bucket'];
+  document.getElementById('images').innerHTML = imgs.map(n =>
+    `<a href="kit/images/${n}.png" class="${n.startsWith('icon') ? 'icon' : ''}"><img src="kit/thumbs/${n}.webp" alt="" loading="lazy"><span>${n}.png</span></a>`).join('');
+  Promise.all([1,2,3].map(s => fetch(`kit/prompts/stage${s}-evolve.txt`).then(r => r.text()))).then(ts => {
+    const names = ['Stage 1: no guidance','Stage 2: design prompt','Stage 3: full design'];
+    const el = document.getElementById('prompts');
+    ts.forEach((t, i) => { const h = document.createElement('p'); h.innerHTML = '<strong>' + names[i] + '</strong>'; const p = document.createElement('pre'); p.textContent = t.trim(); el.append(h, p); });
+  });
+  fetch('kit/design-brief.md').then(r => r.text()).then(md => {
+    document.getElementById('brief').innerHTML = window.marked ? marked.parse(md) : '<pre>' + md.replace(/</g, '&lt;') + '</pre>';
+  });
+</script>
+</body>
+</html>

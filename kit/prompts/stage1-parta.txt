@@ -1,0 +1,3 @@
+Build a course in Parta from the document lightning-safety.pdf in this folder.
+
+Create a new course for this. Don't open, change, or reuse any other course or project in this account.
