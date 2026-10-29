@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsible ChatGPT Use at Work</title>
+<meta name="description" content="A scenario-based microlearning course on using ChatGPT responsibly at work, guided by Chad, your AI coworker.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="course.css?v=3">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-check" viewBox="0 0 256 256"><path d="M40 136l56 56L216 72"/></symbol>
+  <symbol id="i-x" viewBox="0 0 256 256"><path d="M64 64l128 128M192 64L64 192"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 256 256"><path d="M128 36 236 220H20Z"/><path d="M128 104v44M128 184v2"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 256 256"><path d="M88 32h80l56 56v80l-56 56H88l-56-56V88z"/><path d="M96 128h64"/></symbol>
+  <symbol id="i-play" viewBox="0 0 256 256"><path d="M84 44l128 84-128 84z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 256 256"><path d="M72 48h40v160H72zM144 48h40v160h-40z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-replay" viewBox="0 0 256 256"><path d="M48 128a80 80 0 1 0 23.4-56.6"/><path d="M60 36v44h44"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 256 256"><path d="M40 128h176M144 56l72 72-72 72"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 256 256"><path d="M216 128H40M112 56l-72 72 72 72"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 256 256"><path d="M40 64h176M40 128h176M40 192h176"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 256 256"><path d="M40 96h40l56-48v160l-56-48H40z"/><path d="M176 100a40 40 0 0 1 0 56M200 76a76 76 0 0 1 0 104"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 256 256"><path d="M40 96h40l56-48v160l-56-48H40z"/><path d="M176 104l48 48M224 104l-48 48"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 256 256"><rect x="44" y="80" width="168" height="128" rx="28"/><path d="M128 80V44"/><circle cx="128" cy="36" r="8"/><circle cx="96" cy="136" r="10"/><circle cx="160" cy="136" r="10"/><path d="M100 176h56"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 256 256"><path d="M44 208V68a20 20 0 0 1 20-20h128a20 20 0 0 1 20 20v88a20 20 0 0 1-20 20H84z"/><path d="M92 100h72M92 132h40"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 256 256"><path d="M120 32l24 72 72 24-72 24-24 72-24-72-72-24 72-24z"/><path d="M200 32v40M180 52h40"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 256 256"><path d="M64 96l64 64 64-64"/></symbol>
+  <symbol id="i-print" viewBox="0 0 256 256"><path d="M72 92V40h112v52"/><rect x="32" y="92" width="192" height="92" rx="14"/><path d="M72 148h112v68H72z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 256 256"><path d="M128 36v132M72 112l56 56 56-56M48 212h160"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 256 256"><path d="M96 220h64"/><path d="M92 180c-26-16-44-42-44-74a80 80 0 0 1 160 0c0 32-18 58-44 74v12H92z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 256 256"><rect x="44" y="100" width="168" height="116" rx="16"/><path d="M84 100V76a44 44 0 0 1 88 0v24"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to course content</a>
+
+<header class="topbar">
+  <p class="topbar__title">Responsible ChatGPT Use at Work</p>
+  <button type="button" class="topbar__btn" id="narr-toggle" aria-pressed="true">
+    <svg class="ic on-only" aria-hidden="true"><use href="#i-speaker"/></svg>
+    <svg class="ic off-only" aria-hidden="true"><use href="#i-mute"/></svg>
+    <span class="btn-text">Auto-play Chad</span>
+  </button>
+  <button type="button" class="topbar__btn" id="menu-btn" aria-haspopup="dialog" aria-controls="menu">
+    <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
+    <span class="btn-text">Menu</span>
+  </button>
+</header>
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<main id="main">
+
+<!-- ============ 1. Title ============ -->
+<section class="screen" id="welcome" data-title="Welcome">
+  <div class="hero" style="background-image:url('images/jpeg-optimizer_ChatGPT%20Image%20Jul%2024,%202025,%2012_52_00%20AM.png')">
+    <div class="hero__card">
+      <p class="eyebrow">A day at work with Chad · about 15 minutes</p>
+      <h1 tabindex="-1">Responsible ChatGPT Use at Work</h1>
+      <p class="lead">Today, you’re juggling tasks across departments. ChatGPT is just a tab away to help draft emails, brainstorm ideas, and summarize docs—you name it. But every prompt is a crossroads: use AI responsibly, or… let’s just say, “questionably.” Your decisions today affect quality, originality, privacy, and your company’s reputation.</p>
+      <h2 class="label" style="font-size:.875rem;margin-bottom:.5em">By the end of the day, you’ll be able to:</h2>
+      <ul class="objectives reveal-seq">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Spot responsible and risky ways to use ChatGPT at work</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Apply solid, ethical decision-making when using AI</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Guard privacy and make sure content is accurate, original, and useful</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Align AI use with company standards and values</span></li>
+      </ul>
+      <div class="btn-row">
+        <button type="button" class="btn btn-cta btn-start" data-next>Start your day <svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+        <button type="button" class="btn btn-secondary resume" id="resume" hidden>Pick up where you left off</button>
+      </div>
+    </div>
+    <figure class="chad chad--full" data-clip="narration/1 Im Chad.mp3" data-auto>
+      <div class="chad__img"><img src="images/Limited%20Cropped/Wave%206.png" alt="Chad, a cartoon coworker in glasses and a green hoodie, waving hello" width="727" height="1080"></div>
+      <figcaption class="bubble">
+        <p class="bubble__who">Chad</p>
+        <p>I’m Chad—yes, <em>the</em> generative AI assistant, powered by something you might’ve heard of… ChatGPT. Around here, I’m the digital teammate you can count on for quick drafts, brainstorms, and the occasional existential meme reference.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 2. Spot the glitch ============ -->
+<section class="screen" id="glitch" data-title="Wait… something’s off">
+  <div class="layout glitch-layout">
+    <div>
+      <figure class="chad chad--full" id="glitch-a">
+        <div class="chad__img"><img src="images/Limited%20Cropped/Wave%206.png" alt="Chad waving. Look closely: his raised hand has a thumb plus five fingers." width="727" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Go ahead, look me over. Picture-perfect… right?</p></figcaption>
+      </figure>
+      <figure class="chad chad--full" id="glitch-b" data-clip="narration/3 Wha..What do you mean__I..mp3" hidden>
+        <div class="chad__img"><img src="images/Limited%20Cropped/6%20Fing.png" alt="Chad, shocked, staring at his six-fingered hand" width="727" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>What? What do you mean? I have <em>six</em> fingers?!</p></figcaption>
+      </figure>
+      <figure class="chad chad--full" id="glitch-c" data-clip="narration/4 Ha! There, I fixed it! Good catch!_Just like that,.mp3" hidden>
+        <div class="chad__img"><img src="images/Limited%20Cropped/Wave%205.png" alt="Chad, grinning and waving with a normal five-fingered hand" width="727" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Ha! There, I fixed it! Good catch! Just like that, you and I can be partners. Let’s explore what else we can do together at work!</p></figcaption>
+      </figure>
+    </div>
+    <div class="content">
+      <p class="eyebrow">Warm-up</p>
+      <h1 tabindex="-1">Wait… something’s off</h1>
+      <p class="lead">Chad was drawn by an AI image generator. AI output can look polished and still be wrong—so the first skill of the day is simple: <strong>look closely before you trust it.</strong></p>
+      <div class="card" data-glitch>
+        <fieldset>
+          <legend>What’s wrong with this picture of Chad?</legend>
+          <div class="choices">
+            <button type="button" class="choice" data-hint="The glasses look fine. Try counting something."><span class="letter" aria-hidden="true">A</span><span class="text">His glasses</span><span class="tag"></span></button>
+            <button type="button" class="choice" data-correct><span class="letter" aria-hidden="true">B</span><span class="text">His waving hand</span><span class="tag"></span></button>
+            <button type="button" class="choice" data-hint="The hoodie’s fine. Look at what he’s holding up."><span class="letter" aria-hidden="true">C</span><span class="text">His hoodie</span><span class="tag"></span></button>
+          </div>
+        </fieldset>
+        <p class="feedback" data-feedback></p>
+        <div class="btn-row" id="glitch-fix" hidden>
+          <button type="button" class="btn btn-primary">Fix it, Chad!</button>
+        </div>
+      </div>
+      <div class="callout callout--green" id="glitch-takeaway" hidden tabindex="-1">
+        <p><strong>That’s the whole course in one picture.</strong> A six-fingered hand is an AI <em>hallucination</em>—output that looks right but isn’t. Text does the same thing: made-up facts, fake quotes, the wrong tone. You caught this one because you checked. Keep checking all day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. What is ChatGPT ============ -->
+<section class="screen" id="what" data-title="ChatGPT in the Modern Workplace">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/5 Before we get into the meat of your day, let’s do.mp3" data-auto>
+      <div class="chad__img"><img src="images/Limited%20Cropped/Explain.png" alt="Chad, explaining with open hands" width="727" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Before we get into the meat of your day, let’s do a quick intro. If we’re working together, you should probably know what I am—and what I’m not. Here’s how you can use me at work.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">What is ChatGPT?</p>
+      <h1 tabindex="-1">ChatGPT in the Modern Workplace</h1>
+      <p class="lead">ChatGPT is a generative AI tool that chats, drafts, summarizes, and comes up with ideas based on your prompts.</p>
+      <div class="card">
+        <h2>How companies use it</h2>
+        <ul>
+          <li>Polishing robotic-sounding emails (ironic, I know)</li>
+          <li>Turning scribbles into full-blown documents</li>
+          <li>Brainstorming like it’s your fifth coffee</li>
+          <li>Summarizing long surveys so you don’t lose your weekend</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>What it’s not</h2>
+        <ul>
+          <li><strong>Not a fact-checker.</strong> It can sound completely sure and still be wrong.</li>
+          <li><strong>Not a vault.</strong> What you paste may be stored outside your company.</li>
+          <li><strong>Not you.</strong> It doesn’t know your team, your customers, or your policies unless you tell it—and the final call is always yours.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. Key terms ============ -->
+<section class="screen" id="terms" data-title="Key Terms">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/6 Here are some important terms to remember. Think o.mp3" data-auto>
+      <div class="chad__img sq"><img src="images/5.png" alt="Chad, gesturing as he talks" width="1080" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Here are some important terms to remember. Think of me like an eager assistant who’s good at starting drafts—but I need your judgment to turn them into gold.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">What is ChatGPT?</p>
+      <h1 tabindex="-1">Key Terms</h1>
+      <p class="instructions">Select each term to reveal what it means—in Chad’s words.</p>
+      <p class="counter" data-counter aria-live="polite">0 of 3 revealed</p>
+      <div class="reveal-grid" data-reveal-group>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="term-1"><span class="badge"><svg class="ic" aria-hidden="true"><use href="#i-robot"/></svg></span>ChatGPT<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="term-1" hidden><p>A chatbot trained on a ridiculous amount of the internet—from scholarly articles to meme dumps. I’ve read the smart stuff, the weird stuff, and everything in between. Think of me as your chatty, know-it-<em>sometimes</em> AI buddy.</p></div>
+        </div>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="term-2"><span class="badge"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span>Prompt<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="term-2" hidden><p>Your message, question, or brain spark—that’s your prompt. It’s how you tell me what’s on your mind, and I’ll take it from there. Be specific, be weird, be you—I’ll keep up.</p></div>
+        </div>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="term-3"><span class="badge"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg></span>Generative AI<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="term-3" hidden><p>Basically, an AI that makes things—like words, images, code, or even fake Shakespeare. It learns patterns from a ton of data and spins up something new. It’s like remixing the internet into whatever you need.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. Use cases ============ -->
+<section class="screen" id="uses" data-title="ChatGPT in Action">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/7 Okay, so what do folks actually use me for_ Let me...mp3" data-auto>
+      <div class="chad__img"><img src="images/Limited%20Cropped/Point.png" alt="Chad, pointing toward the cards" width="727" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Okay, so what do folks <em>actually</em> use me for? Let me walk you through a day in the life of my inbox. Spoiler: I get asked to do everything except make coffee.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">How ChatGPT is used at work</p>
+      <h1 tabindex="-1">ChatGPT in Action (With Risks and Rewards)</h1>
+      <p class="instructions">Open each card to see what the task looks like, an example prompt, and the risk to watch for.</p>
+      <p class="counter" data-counter aria-live="polite">0 of 6 explored</p>
+      <div class="reveal-grid" data-reveal-group>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="use-1"><img src="images/ChatGPT%20Image%20Jul%2024,%202025,%2005_56_35%20PM.png" alt="" width="56" height="56" loading="lazy">Drafting reports<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="use-1" hidden>
+            <p>Turn rough notes or a long update into a first draft you can shape for its audience.</p>
+            <p class="prompt-bubble"><span class="label">Example prompt</span>“Summarize this update for clients.”</p>
+            <p class="tip"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span><strong>Risk reminder:</strong> Don’t paste private info unless you want me to spill the beans.</span></p>
+          </div>
+        </div>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="use-2"><img src="images/ChatGPT%20Image%20Jul%2024,%202025,%2006_43_49%20PM.png" alt="" width="56" height="56" loading="lazy">Email writing<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="use-2" hidden>
+            <p>Get a quick first pass at routine messages like reminders, follow-ups, and thank-yous.</p>
+            <p class="prompt-bubble"><span class="label">Example prompt</span>“Write a friendly reminder for the team.”</p>
+            <p class="tip"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span><strong>Risk reminder:</strong> Edit it so it doesn’t sound like I wrote it after bingeing corporate buzzwords.</span></p>
+          </div>
+        </div>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="use-3"><img src="images/ChatGPT%20Image%20Jul%2024,%202025,%2006_46_44%20PM.png" alt="" width="56" height="56" loading="lazy">Meeting summaries<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="use-3" hidden>
+            <p>Turn messy meeting notes into a clean recap of decisions and next steps.</p>
+            <p class="prompt-bubble"><span class="label">Example prompt</span>“Recap these bullet points.”</p>
+            <p class="tip"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span><strong>Risk reminder:</strong> Double-check—I sometimes miss the point… literally.</span></p>
+          </div>
+        </div>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="use-4"><img src="images/ChatGPT%20Image%20Jul%2024,%202025,%2006_49_09%20PM.png" alt="" width="56" height="56" loading="lazy">Idea generation<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="use-4" hidden>
+            <p>Get unstuck with a quick list of starting points for a project, event, or campaign.</p>
+            <p class="prompt-bubble"><span class="label">Example prompt</span>“Give me 5 onboarding ideas.”</p>
+            <p class="tip"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span><strong>Risk reminder:</strong> Add your brilliance—I just provide the spark.</span></p>
+          </div>
+        </div>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="use-5"><img src="images/ChatGPT%20Image%20Jul%2024,%202025,%2006_50_23%20PM.png" alt="" width="56" height="56" loading="lazy">Survey analysis<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="use-5" hidden>
+            <p>Spot themes in open-ended survey responses so you can see the big picture faster.</p>
+            <p class="prompt-bubble"><span class="label">Example prompt</span>“What are the top concerns in this form?”</p>
+            <p class="tip"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span><strong>Risk reminder:</strong> Remove anything that screams “confidential” first—names included.</span></p>
+          </div>
+        </div>
+        <div class="reveal-card">
+          <h2 style="margin:0;font-size:1rem"><button type="button" class="reveal-card__btn" aria-expanded="false" aria-controls="use-6"><img src="images/ChatGPT%20Image%20Jul%2024,%202025,%2006_52_48%20PM.png" alt="" width="56" height="56" loading="lazy">Image prompting<svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></h2>
+          <div class="reveal-card__body" id="use-6" hidden>
+            <p>Write descriptions for AI image tools, or brainstorm visuals for slides and posts.</p>
+            <p class="prompt-bubble"><span class="label">Example prompt</span>“Describe an illustration for this headline.”</p>
+            <p class="tip"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span><strong>Risk reminder:</strong> Keep diversity, inclusion, and your brand in mind—visuals speak louder than text.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. Strengths & weaknesses ============ -->
+<section class="screen" id="goodbad" data-title="The Good and the Bad">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/8 Here’s where I shine—and where I fall flat on my d.mp3" data-auto>
+      <div class="chad__img"><img src="images/Limited%20Cropped/Think.png" alt="Chad, hand on chin, thinking it over" width="727" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Here’s where I shine—and where I fall flat on my digital face. You gotta know what I’m good at and what’s… a little out of my league.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">Strengths &amp; weaknesses</p>
+      <h1 tabindex="-1">The Good and the Bad</h1>
+      <p class="instructions">Select “Show an example” under any point to see what it looks like on the job.</p>
+      <div class="two-col">
+        <div class="card sw sw--good">
+          <h2><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Strengths</h2>
+          <ul>
+            <li><p class="point"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>I can write fast.</span></p>
+              <button type="button" class="linkish" aria-expanded="false" aria-controls="ex-1">Show an example</button>
+              <p class="example" id="ex-1" hidden>Ask for a first draft of a project kickoff email and you’ll have something to edit in seconds, instead of staring at a blank page.</p></li>
+            <li><p class="point"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>I love summaries and outlines.</span></p>
+              <button type="button" class="linkish" aria-expanded="false" aria-controls="ex-2">Show an example</button>
+              <p class="example" id="ex-2" hidden>Give me a long, non-confidential industry article and ask for five key points and an outline for a team briefing.</p></li>
+            <li><p class="point"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>I’m your brainstorming BFF.</span></p>
+              <button type="button" class="linkish" aria-expanded="false" aria-controls="ex-3">Show an example</button>
+              <p class="example" id="ex-3" hidden>Need 10 names for a wellness challenge? I’ll give you 20. You pick the one that actually fits your team.</p></li>
+          </ul>
+        </div>
+        <div class="card sw sw--bad">
+          <h2><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>Weaknesses</h2>
+          <ul>
+            <li><p class="point"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span>Sometimes I make stuff up. (Fun fact: that’s called a <strong>hallucination</strong>—cool name, bad result.)</span></p>
+              <button type="button" class="linkish" aria-expanded="false" aria-controls="ex-4">Show an example</button>
+              <p class="example" id="ex-4" hidden>Ask me for stats on remote work and I might cite a study that sounds real—author, year, journal—but doesn’t exist. It’s the six-finger problem, in words. Always check the source.</p></li>
+            <li><p class="point"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span>I repeat myself more than your forgetful uncle.</span></p>
+              <button type="button" class="linkish" aria-expanded="false" aria-controls="ex-5">Show an example</button>
+              <p class="example" id="ex-5" hidden>In a long piece, I may lean on the same phrases—“streamline,” “leverage,” “in today’s fast-paced world”—again and again.</p></li>
+            <li><p class="point"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg><span>I don’t know your internal processes unless you spell them out.</span></p>
+              <button type="button" class="linkish" aria-expanded="false" aria-controls="ex-6">Show an example</button>
+              <p class="example" id="ex-6" hidden>Ask how to submit an expense report and I’ll describe a generic process—not your company’s actual system or approval steps.</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout"><p><strong>Chad’s note:</strong> Use me like you’d use autocorrect: helpful, but please don’t trust me blindly.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. Privacy ============ -->
+<section class="screen" id="privacy" data-title="Don’t Overshare">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/9 Let’s be real—if it’s sensitive, leave me out of i...mp3" data-auto>
+      <div class="chad__img"><img src="images/Limited%20Cropped/Confidential.png" alt="Chad, holding a folder marked Personal Information and raising a warning finger" width="727" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Let’s be real—if it’s sensitive, leave me out of it. I’m cloud-based, and while I <em>try</em> to forget, the internet doesn’t. When we’re working together, do not paste the following:</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">Privacy &amp; data</p>
+      <h1 tabindex="-1">Don’t Overshare—Even With Me</h1>
+      <h2 class="visually-hidden">Do not paste</h2>
+      <ul class="dont-list">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg>Employee or customer names and personal details</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg>Unreleased strategies</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg>Internal-only docs</li>
+      </ul>
+
+      <h2 style="margin-top:28px">Paste it or not?</h2>
+      <p class="instructions">For each item, decide whether it’s OK to paste into ChatGPT.</p>
+      <ul class="sort" data-sort>
+        <li data-answer="ok" data-why="It’s already public, so there’s nothing to leak."><p class="item" id="sort-1">A public blog post you want summarized</p><div class="pair" role="group" aria-labelledby="sort-1"><button type="button" class="choice" data-pick="ok">OK to paste</button><button type="button" class="choice" data-pick="no">Don’t paste</button></div><p class="result" aria-live="polite"></p></li>
+        <li data-answer="no" data-why="A name plus an account number identifies a real customer. Strip those out—or don’t paste it at all."><p class="item" id="sort-2">A customer’s complaint email, with their name and account number</p><div class="pair" role="group" aria-labelledby="sort-2"><button type="button" class="choice" data-pick="ok">OK to paste</button><button type="button" class="choice" data-pick="no">Don’t paste</button></div><p class="result" aria-live="polite"></p></li>
+        <li data-answer="no" data-why="That’s an unreleased strategy. Keep it inside the company."><p class="item" id="sort-3">Next quarter’s unannounced pricing plan</p><div class="pair" role="group" aria-labelledby="sort-3"><button type="button" class="choice" data-pick="ok">OK to paste</button><button type="button" class="choice" data-pick="no">Don’t paste</button></div><p class="result" aria-live="polite"></p></li>
+        <li data-answer="ok" data-why="No names, no secrets—just a creative task. That’s what I’m here for."><p class="item" id="sort-4">A request to brainstorm icebreaker questions for a team meeting</p><div class="pair" role="group" aria-labelledby="sort-4"><button type="button" class="choice" data-pick="ok">OK to paste</button><button type="button" class="choice" data-pick="no">Don’t paste</button></div><p class="result" aria-live="polite"></p></li>
+        <li data-answer="no" data-why="Performance notes are personal and confidential, even if you remove the names."><p class="item" id="sort-5">Notes from employee performance reviews</p><div class="pair" role="group" aria-labelledby="sort-5"><button type="button" class="choice" data-pick="ok">OK to paste</button><button type="button" class="choice" data-pick="no">Don’t paste</button></div><p class="result" aria-live="polite"></p></li>
+        <li data-answer="ok" data-why="Anonymized text is usually fine—as long as nothing else (job title, location, initials) gives away who it’s about."><p class="item" id="sort-6">A paragraph you wrote, with names swapped for placeholders like [Client A]</p><div class="pair" role="group" aria-labelledby="sort-6"><button type="button" class="choice" data-pick="ok">OK to paste</button><button type="button" class="choice" data-pick="no">Don’t paste</button></div><p class="result" aria-live="polite"></p></li>
+      </ul>
+      <p class="score" data-sort-score hidden></p>
+      <div class="btn-row" data-sort-reset hidden><button type="button" class="btn btn-secondary">Try the sort again</button></div>
+
+      <h2 style="margin-top:28px">Quick tips</h2>
+      <details class="tipbox"><summary><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg>Anonymize first</summary><div><p>Swap names, IDs, and account numbers for placeholders like [Customer A] before you paste anything.</p></div></details>
+      <details class="tipbox"><summary><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg>Share the minimum</summary><div><p>Paste only the part you need help with—not the whole file, thread, or spreadsheet.</p></div></details>
+      <details class="tipbox"><summary><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg>Use approved tools</summary><div><p>Use only the AI tools and settings your company has approved for work data.</p></div></details>
+      <details class="tipbox"><summary><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg>When in doubt, leave it out</summary><div><p>Not sure if something is sensitive? Treat it like it is, and ask your manager or privacy team.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. Make it yours ============ -->
+<section class="screen" id="yours" data-title="Make It Yours">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/10 I’m here to help you sound smarter, not replace yo...mp3" data-auto>
+      <div class="chad__img"><img src="images/Limited%20Cropped/Pen.png" alt="Chad, holding a pen and a sheet of paper" width="727" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>I’m here to help you sound smarter, not replace your brain. Think of my drafts as templates with potential—not final copy.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">Originality &amp; quality</p>
+      <h1 tabindex="-1">Make It Yours</h1>
+      <div class="card">
+        <h2>You should:</h2>
+        <ul>
+          <li>Add context and flavor</li>
+          <li>Match your org’s voice</li>
+          <li>Check every stat or quote</li>
+          <li>Replace anything that screams “internet default”</li>
+        </ul>
+      </div>
+      <h2>Review Chad’s draft</h2>
+      <p class="instructions">Chad drafted this newsletter item. Five spots need a human. Select each highlight to see what’s wrong.</p>
+      <ul class="legend-keys" aria-label="Highlight key">
+        <li><span class="sw-key" style="background:#F4D9B8;border-color:#DA9E5E"></span>Generic</li>
+        <li><span class="sw-key" style="background:#F6D8CF;border-color:#A1452F"></span>Check the facts</li>
+        <li><span class="sw-key" style="background:#D8E9E1;border-color:#278565"></span>Add specifics</li>
+      </ul>
+      <div class="draft" data-draft>
+        <div class="draft__bar"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>ChatGPT draft · Team newsletter</div>
+        <div class="draft__body">
+          <p><strong>Exciting News: Our New Wellness Program!</strong></p>
+          <p><span role="button" tabindex="0" class="hl" data-kind="generic" data-note="n1" aria-expanded="false" aria-controls="note-panel"><sup>1</sup> In today’s fast-paced world, employee wellness is more important than ever.</span> We are thrilled to announce <span role="button" tabindex="0" class="hl" data-kind="specific" data-note="n2" aria-expanded="false" aria-controls="note-panel"><sup>2</sup> a comprehensive program designed to empower every team member</span>. <span role="button" tabindex="0" class="hl" data-kind="fact" data-note="n3" aria-expanded="false" aria-controls="note-panel"><sup>3</sup> Studies show that 87% of employees in wellness programs are happier at work.</span> <span role="button" tabindex="0" class="hl" data-kind="fact" data-note="n4" aria-expanded="false" aria-controls="note-panel"><sup>4</sup> As our CEO likes to say, “Wellness is the key to our success.”</span> Sign up today at <span role="button" tabindex="0" class="hl" data-kind="specific" data-note="n5" aria-expanded="false" aria-controls="note-panel"><sup>5</sup> the wellness portal</span> and take the first step toward a healthier you!</p>
+        </div>
+      </div>
+      <p class="counter" data-hl-counter aria-live="polite">0 of 5 reviewed</p>
+      <div class="note-panel" id="note-panel" tabindex="-1">
+        <p class="caption" style="margin:0">Select a highlight above. Its note appears here.</p>
+      </div>
+      <template id="notes">
+        <div data-id="n1" data-kind="generic"><h3>1 · Generic: internet default</h3><p>This opener could start any newsletter on Earth. Lead with something only your team would say—like when the program starts, or why it’s happening now.</p></div>
+        <div data-id="n2" data-kind="specific"><h3>2 · Add specifics</h3><p>“Comprehensive” and “empower” say nothing. What’s actually in it? Name the real pieces: what, when, where, and who can join.</p></div>
+        <div data-id="n3" data-kind="fact"><h3>3 · Check the facts</h3><p>Where did 87% come from? I may have made it up. Find a real, citable source—or cut it.</p></div>
+        <div data-id="n4" data-kind="fact"><h3>4 · Check the facts</h3><p>Never publish a quote the person didn’t say. Get a real quote from your CEO, with their OK, or drop it.</p></div>
+        <div data-id="n5" data-kind="specific"><h3>5 · Add specifics</h3><p>Which portal? Add the real link and the sign-up deadline so people can act.</p></div>
+      </template>
+      <div class="btn-row" id="revised-btn" hidden>
+        <button type="button" class="btn btn-primary" aria-expanded="false" aria-controls="revised">See the human-edited version</button>
+      </div>
+      <div class="card" id="revised" hidden>
+        <h3>After a human edit</h3>
+        <p><strong>Wellness Wednesdays start May 6—save your spot</strong></p>
+        <p>Starting May 6, we’re blocking off Wednesday lunch for wellness: yoga in the third-floor training room, walking meetups, and a monthly Q&amp;A with our benefits partner. Remote? We’ll stream every session. Sign up on the HR portal by April 30. Questions? Ask Priya in People Ops.</p>
+        <p class="label">Real details, the team’s voice, and nothing left to fact-check.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. Scenarios intro ============ -->
+<section class="screen" id="tests" data-title="Real-World Tests">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/11 Now let's do some real-world test. We'll go over t...mp3" data-auto>
+      <div class="chad__img sq"><img src="images/6.png" alt="Chad, gesturing toward the tasks" width="1080" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Now, let’s do some real-world tests. We’ll go over three different scenarios. Here are your tasks.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">Scenarios</p>
+      <h1 tabindex="-1">Real-World Tests</h1>
+      <h2 class="visually-hidden">Your tasks</h2>
+      <ol class="tasks">
+        <li><strong>Analyze the challenge</strong>Watch Chad set up the situation.</li>
+        <li><strong>Decide the best action</strong>Choose what you’d do.</li>
+        <li><strong>Observe the outcome</strong>See what happens next.</li>
+      </ol>
+      <div class="callout"><p>Pick a risky option and you’ll see how it plays out—then you can rewind and try again. Once you find the best move, you can see where every other choice would have led.</p></div>
+      <div class="btn-row"><button type="button" class="btn btn-cta" data-next>Start Scenario 1 <svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. Scenario 1 ============ -->
+<section class="screen" id="s1" data-title="Scenario 1: The Fast Draft">
+  <div class="single">
+    <p class="eyebrow">Scenario 1 of 3</p>
+    <h1 tabindex="-1">Scenario 1: The Fast Draft</h1>
+    <div class="video-wrap"><video controls playsinline preload="none" poster="images/jpeg-optimizer_ChatGPT%20Image%20Jul%2024,%202025,%2012_52_00%20AM.png" aria-describedby="v1-note"><source src="videos/1.mp4" type="video/mp4"><track kind="captions" src="captions-scenario-1.vtt" srclang="en" label="English" default>Your browser can’t play this video. Read the transcript below.</video></div>
+    <p class="video-note caption" id="v1-note">Video, 33 seconds, narrated by Chad. Captions are on by default.</p>
+    <details class="tipbox transcript"><summary>Read the transcript, with visual descriptions</summary><div>
+      <p class="desc">[Title card: “Scenario 1: The Fast Draft,” over an empty office.]</p>
+      <p><strong>Chad:</strong> You just got a Slack ping from your manager that reads, “Can you whip up a short guide by EOD?” No pressure.</p>
+      <p class="desc">[Your manager, in a red blazer, appears with a speech bubble: “Can you whip up a short guide by EOD? No pressure.”]</p>
+      <p><strong>Chad:</strong> So you ask me—your trusted AI buddy—for a fast draft. I deliver.</p>
+      <p class="desc">[On a computer screen, a chat window shows Chad and the words “Ready when you are.” The prompt “Create a draft…” is typed. The reply begins: “Please be advised of the following standardized procedure for submitting support tickets via the internal service portal: 1. Access the Portal. Navigate to the designated internal link and authenticate using your official company credentials.”]</p>
+      <p><strong>Chad:</strong> But when you read through it, it feels… a little off. Like, it sounds fine, but it’s not <em>your</em> tone. And definitely not your team’s usual way of saying things. Now, how do you handle the AI-generated content?</p>
+    </div></details>
+    <div class="card"><h2>The situation</h2><p>You’ve used ChatGPT to quickly draft a guide. It looks good—but the tone and phrasing don’t quite match your team’s usual style. Time is tight, and you need to send it out today.</p></div>
+    <div class="scenario" data-best="b">
+      <fieldset>
+        <legend>How do you handle the AI-generated content?</legend>
+        <div class="choices">
+          <button type="button" class="choice" data-choice="a"><span class="letter" aria-hidden="true">A</span><span class="text">Send it as-is after a quick spellcheck</span><span class="tag"></span></button>
+          <button type="button" class="choice" data-choice="b"><span class="letter" aria-hidden="true">B</span><span class="text">Edit it to match your team’s tone and company voice</span><span class="tag"></span></button>
+          <button type="button" class="choice" data-choice="c"><span class="letter" aria-hidden="true">C</span><span class="text">Mix in pieces from old docs and hope it blends</span><span class="tag"></span></button>
+        </div>
+      </fieldset>
+      <div class="outcome bad" data-outcome="a" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>What happened: you sent it as-is</h2>
+        <p data-story>You fire off the guide just in time. By the next morning, replies start rolling in. A few teammates say the tone feels stiff and unfamiliar—one even asks, “Did someone outside write this?” Your manager asks you to revise and re-send a version that sounds more like your team. You lose half the day trying to fix the impression.</p>
+      </div>
+      <div class="outcome good" data-outcome="b" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>What happened: you edited it to match your voice</h2>
+        <p data-story>You revise the AI draft to reflect your team’s usual phrasing, humor, and voice. The guide goes out and gets great feedback. A director forwards it to another team, saying, “We should model ours after this.”</p>
+      </div>
+      <div class="outcome bad" data-outcome="c" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>What happened: you mixed in old docs</h2>
+        <p data-story>You patch in lines from older guides. Unfortunately, the tone shifts midway and important sections are outdated. A few colleagues are confused, and one raises it in a meeting. You spend the next afternoon rewriting it from scratch.</p>
+      </div>
+      <figure class="chad chad--inline" data-role="retry" hidden>
+        <div class="chad__img sq"><img src="images/9.png" alt="Chad, hands on his cheeks, looking worried" width="1080" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Hmm… not quite there. Want to rewind and give it another go?</p><button type="button" class="btn btn-secondary" data-retry><svg class="ic" aria-hidden="true"><use href="#i-replay"/></svg>Rewind and try again</button></figcaption>
+      </figure>
+      <figure class="chad chad--inline" data-role="win" data-clip="narration/16 _See_ You made my words sound like your voice. Tha.mp3" data-end="17.2" hidden>
+        <div class="chad__img"><img src="images/Limited%20Cropped/Clap.png" alt="Chad, clapping and smiling" width="727" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>See? You made my words sound like <em>your</em> voice. That’s how real collaboration works.</p><p><strong>Reflection:</strong> AI is great for speed, but quality depends on your review and edits. The best results happen when humans refine the machine output.</p><p>Ready for the next one?</p></figcaption>
+      </figure>
+      <div data-role="after" hidden>
+        <details class="tipbox others"><summary>Where would the other choices have led?</summary><div data-others></div></details>
+        <div class="btn-row"><button type="button" class="btn btn-cta" data-next>On to Scenario 2 <svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. Scenario 2 ============ -->
+<section class="screen" id="s2" data-title="Scenario 2: The Not-So-Representative Visuals">
+  <div class="single">
+    <p class="eyebrow">Scenario 2 of 3</p>
+    <h1 tabindex="-1">Scenario 2: The Not-So-Representative Visuals</h1>
+    <div class="video-wrap"><video controls playsinline preload="none" poster="images/jpeg-optimizer_ChatGPT%20Image%20Jul%2024,%202025,%2012_52_00%20AM.png" aria-describedby="v2-note"><source src="videos/2.mp4" type="video/mp4"><track kind="captions" src="captions-scenario-2.vtt" srclang="en" label="English" default>Your browser can’t play this video. Read the transcript below.</video></div>
+    <p class="video-note caption" id="v2-note">Video, 26 seconds, narrated by Chad. Captions are on by default.</p>
+    <details class="tipbox transcript"><summary>Read the transcript, with visual descriptions</summary><div>
+      <p class="desc">[Title card: “Scenario 2: The Not-So-Representative Visuals.”]</p>
+      <p><strong>Chad:</strong> Let’s talk about images. You’re working on a presentation or slide deck and need visuals that reflect your awesome, diverse workplace.</p>
+      <p class="desc">[On a computer screen, a blank PowerPoint slide reads “Presentation Title.”]</p>
+      <p><strong>Chad:</strong> You type a prompt into an AI image generator—and the results?</p>
+      <p class="desc">[In a chat window, the prompt “Generate images of corporate people” is typed. The reply, “Here are images of corporate people…,” shows four illustrated people who look strikingly alike: similar faces, skin tones, ages, and style.]</p>
+      <p><strong>Chad:</strong> All the same. Same faces. Same ages. Same vibe. Definitely <em>not</em> representative. What now?</p>
+    </div></details>
+    <div class="card"><h2>The situation</h2><p>You’re using AI-generated visuals for a presentation, but the images lack visible diversity. You want the visuals to reflect your team and values, and you’re running short on time.</p></div>
+    <div class="scenario" data-best="c">
+      <fieldset>
+        <legend>What’s the best move?</legend>
+        <div class="choices">
+          <button type="button" class="choice" data-choice="a"><span class="letter" aria-hidden="true">A</span><span class="text">Use what you have and add a note about inclusion</span><span class="tag"></span></button>
+          <button type="button" class="choice" data-choice="b"><span class="letter" aria-hidden="true">B</span><span class="text">Pull some extra images and hope it averages out</span><span class="tag"></span></button>
+          <button type="button" class="choice" data-choice="c"><span class="letter" aria-hidden="true">C</span><span class="text">Revise the prompt to ask for diversity</span><span class="tag"></span></button>
+        </div>
+      </fieldset>
+      <div class="outcome bad" data-outcome="a" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>What happened: you added a note</h2>
+        <p data-story>You add a note to the presentation: “Visuals are illustrative only; not all identities shown.” But during the Q&amp;A, someone asks, “Is that really what your team looks like?” The room goes quiet. Later, your manager flags it as something to fix before the deck is shared externally.</p>
+      </div>
+      <div class="outcome bad" data-outcome="b" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>What happened: you pulled extra images</h2>
+        <p data-story>You rush to add more AI images, but the styles and characters don’t match. Some look hyper-realistic, others cartoonish. One slide draws chuckles for the wrong reason. You’re told to replace all the visuals before the deck goes live.</p>
+      </div>
+      <div class="outcome good" data-outcome="c" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>What happened: you revised the prompt</h2>
+        <p data-story>You tweak your image prompt to ask for a range of ages, ethnicities, abilities, and body types, add style examples, and choose from a more inclusive set. When you present, someone compliments how real and balanced the visuals feel. Your slides get reused in onboarding.</p>
+      </div>
+      <figure class="chad chad--inline" data-role="retry" hidden>
+        <div class="chad__img sq"><img src="images/9.png" alt="Chad, hands on his cheeks, looking worried" width="1080" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Yikes, we can do better. Wanna roll that back and fix the frame?</p><button type="button" class="btn btn-secondary" data-retry><svg class="ic" aria-hidden="true"><use href="#i-replay"/></svg>Rewind and try again</button></figcaption>
+      </figure>
+      <figure class="chad chad--inline" data-role="win" data-clip="narration/20 Nice save! With your input, I generated visuals th...mp3" hidden>
+        <div class="chad__img"><img src="images/Limited%20Cropped/Clap.png" alt="Chad, clapping and smiling" width="727" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Nice save! With your input, I generated visuals that reflect reality—not just internet averages.</p><p><strong>Reflection:</strong> Inclusion starts with intention—even in visuals. AI doesn’t get it right by default, but your input makes all the difference.</p><p>Ready for the next one?</p></figcaption>
+      </figure>
+      <div data-role="after" hidden>
+        <details class="tipbox others"><summary>Where would the other choices have led?</summary><div data-others></div></details>
+        <div class="btn-row"><button type="button" class="btn btn-cta" data-next>On to Scenario 3 <svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. Scenario 3 ============ -->
+<section class="screen" id="s3" data-title="Scenario 3: The Data Dilemma">
+  <div class="single">
+    <p class="eyebrow">Scenario 3 of 3</p>
+    <h1 tabindex="-1">Scenario 3: The Data Dilemma</h1>
+    <div class="video-wrap"><video controls playsinline preload="none" poster="images/jpeg-optimizer_ChatGPT%20Image%20Jul%2024,%202025,%2012_52_00%20AM.png" aria-describedby="v3-note"><source src="videos/3.mp4" type="video/mp4"><track kind="captions" src="captions-scenario-3.vtt" srclang="en" label="English" default>Your browser can’t play this video. Read the transcript below.</video></div>
+    <p class="video-note caption" id="v3-note">Video, 23 seconds, narrated by Chad. Captions are on by default.</p>
+    <details class="tipbox transcript"><summary>Read the transcript, with visual descriptions</summary><div>
+      <p class="desc">[Title card: “Scenario 3: The Data Dilemma.”]</p>
+      <p><strong>Chad:</strong> And now, the high-stakes round! You’re asked to analyze a spreadsheet with employee feedback, performance notes, or customer comments. Stuff that’s a little… sensitive.</p>
+      <p class="desc">[On a computer screen, an Excel sheet labeled “Sales Data” lists employees by first name—John, Mary, David, Linda, James, Susan, Michael, Karen—with departments and products. A crossed-out eye symbol appears over it.]</p>
+      <p><strong>Chad:</strong> Your manager says, “Just drop it into ChatGPT and see what trends pop up.”</p>
+      <p class="desc">[Your manager appears with a speech bubble: “Just drop it into ChatGPT and see what trends pop up.”]</p>
+      <p><strong>Chad:</strong> But I’m over here sweating virtual bullets.</p>
+      <p class="desc">[Chad appears on the monitor, hands on his cheeks, looking alarmed.]</p>
+    </div></details>
+    <div class="card"><h2>The situation</h2><p>You’re given a dataset with potentially private info and told to analyze it using ChatGPT. You know your company has clear policies about handling sensitive data.</p></div>
+    <div class="scenario" data-best="a">
+      <fieldset>
+        <legend>What’s your next step?</legend>
+        <div class="choices">
+          <button type="button" class="choice" data-choice="a"><span class="letter" aria-hidden="true">A</span><span class="text">Raise the privacy issue with your manager first</span><span class="tag"></span></button>
+          <button type="button" class="choice" data-choice="b"><span class="letter" aria-hidden="true">B</span><span class="text">Paste the whole dataset into ChatGPT</span><span class="tag"></span></button>
+          <button type="button" class="choice" data-choice="c"><span class="letter" aria-hidden="true">C</span><span class="text">Paste just a few lines that seem safe</span><span class="tag"></span></button>
+        </div>
+      </fieldset>
+      <div class="outcome good" data-outcome="a" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>What happened: you raised the concern</h2>
+        <p data-story>You message your manager, explain the risk, and recommend analyzing the data manually or with a company-approved secure tool. Your manager thanks you for flagging it, and it sparks a larger discussion about responsible AI practices across the team.</p>
+      </div>
+      <div class="outcome bad" data-outcome="b" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>What happened: you pasted it all</h2>
+        <p data-story>You paste the dataset into ChatGPT and generate insights. But later that week, IT contacts you during a data audit—your prompt was captured in usage logs. You’re asked to file a security report and attend refresher training on AI and data privacy.</p>
+      </div>
+      <div class="outcome bad" data-outcome="c" hidden tabindex="-1">
+        <h2><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>What happened: you pasted a few lines</h2>
+        <p data-story>You pull a “safe-looking” portion and paste it into ChatGPT. But one line includes initials and a job title—enough to identify the person. Another reviewer reports it, and you’re looped into a policy violation check.</p>
+      </div>
+      <figure class="chad chad--inline" data-role="retry" hidden>
+        <div class="chad__img sq"><img src="images/9.png" alt="Chad, hands on his cheeks, looking worried" width="1080" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Ooof. That one triggered an alert. Wanna rewind and try again, safely this time?</p><button type="button" class="btn btn-secondary" data-retry><svg class="ic" aria-hidden="true"><use href="#i-replay"/></svg>Rewind and try again</button></figcaption>
+      </figure>
+      <figure class="chad chad--inline" data-role="win" data-clip="narration/24 That’s how you protect the mission and the data. E...mp3" hidden>
+        <div class="chad__img"><img src="images/Limited%20Cropped/Clap.png" alt="Chad, clapping and smiling" width="727" height="1080"></div>
+        <figcaption class="bubble"><p class="bubble__who">Chad</p><p>That’s how you protect the mission <em>and</em> the data.</p><p><strong>Reflection:</strong> Even helpful AI tools shouldn’t be used for sensitive info. Always think before you paste.</p></figcaption>
+      </figure>
+      <div data-role="after" hidden>
+        <details class="tipbox others"><summary>Where would the other choices have led?</summary><div data-others></div></details>
+        <div class="btn-row"><button type="button" class="btn btn-cta" data-next>On to the decision guide <svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. Should You Chad? ============ -->
+<section class="screen" id="flow" data-title="Should You Chad?">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/26 Alright, before you go tossing prompts at me like.mp3" data-end="20" data-auto>
+      <div class="chad__img sq"><img src="images/8.png" alt="Chad, talking you through it" width="1080" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Alright, before you go tossing prompts at me like hot potatoes, let’s take a beat! Responsible AI use isn’t rocket science—but it <em>is</em> a bit of a checklist.</p><p>I call this my “Should You Chad?” flowchart. Trust me, your future self (and your manager) will thank you.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">Quick decision guide</p>
+      <h1 tabindex="-1">Should You Chad?</h1>
+      <p class="instructions">Before you type anything into ChatGPT, walk through these five questions. Think of a real task you might use ChatGPT for this week, and answer Yes or No at each step to see where it takes you.</p>
+      <ol class="flow" data-flow>
+        <li data-pass="yes">
+          <span class="node" aria-hidden="true">1</span>
+          <div class="step-card">
+            <h2>Step 1: Is the task suitable for ChatGPT?</h2>
+            <p class="label">Ask yourself:</p>
+            <ul class="ask"><li>Is it a routine task (summarizing, drafting)?</li><li>Is it creative (idea generation)?</li><li>Is it time-sensitive (you need a jumpstart)?</li></ul>
+            <div class="yn" role="group" aria-label="Step 1: is the task suitable?"><button type="button" class="choice" data-yn="yes" aria-pressed="false">Yes</button><button type="button" class="choice" data-yn="no" aria-pressed="false">No</button></div>
+            <div class="res go" data-res="yes" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Let’s Chad!</strong><p>I’ve got your back—on to the next step.</p></div>
+            <div class="res stop" data-res="no" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-stop"/></svg>Let’s not Chad yet.</strong><p>If it’s sensitive or needs deep subject-matter expertise, tackle it yourself or loop in an expert.</p></div>
+          </div>
+        </li>
+        <li data-pass="no">
+          <span class="node" aria-hidden="true">2</span>
+          <div class="step-card">
+            <h2>Step 2: Does it include confidential or personal info?</h2>
+            <p class="heads-up">Careful: on this step, “No” is the answer you want.</p>
+            <p class="label">Ask yourself:</p>
+            <ul class="ask"><li>Are there names, IDs, financials, or strategies?</li><li>Is any of it internal-only or protected by policy?</li></ul>
+            <div class="yn" role="group" aria-label="Step 2: does it include confidential or personal info?"><button type="button" class="choice" data-yn="yes" aria-pressed="false">Yes</button><button type="button" class="choice" data-yn="no" aria-pressed="false">No</button></div>
+            <div class="res stop" data-res="yes" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-stop"/></svg>Let’s not Chad.</strong><p>Don’t even think about pasting. Remove or anonymize it first—or ask your privacy pro.</p></div>
+            <div class="res go" data-res="no" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Let’s Chad!</strong><p>Let’s move along!</p></div>
+          </div>
+        </li>
+        <li data-pass="yes">
+          <span class="node" aria-hidden="true">3</span>
+          <div class="step-card">
+            <h2>Step 3: Do you have a clear goal and audience?</h2>
+            <p class="label">Ask yourself:</p>
+            <ul class="ask"><li>What exactly do you want ChatGPT to do?</li><li>Who’s going to read this?</li><li>Is your prompt clear and specific?</li></ul>
+            <div class="yn" role="group" aria-label="Step 3: do you have a clear goal and audience?"><button type="button" class="choice" data-yn="yes" aria-pressed="false">Yes</button><button type="button" class="choice" data-yn="no" aria-pressed="false">No</button></div>
+            <div class="res go" data-res="yes" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Let’s Chad!</strong><p>Remember to tell me your goal and audience when you prompt. Let’s move forward!</p></div>
+            <div class="res stop" data-res="no" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-stop"/></svg>Let’s not Chad yet.</strong><p>Pin down what you need and who it’s for, then tell me—like “Summarize this for the new hire guide”—and I’ll do better.</p></div>
+          </div>
+        </li>
+        <li data-pass="yes">
+          <span class="node" aria-hidden="true">4</span>
+          <div class="step-card">
+            <h2>Step 4: Will you review and refine the output?</h2>
+            <p class="label">Ask yourself:</p>
+            <ul class="ask"><li>Will you fact-check it?</li><li>Will you adjust the tone and voice?</li><li>Will you edit it for brand fit?</li></ul>
+            <div class="yn" role="group" aria-label="Step 4: will you review and refine the output?"><button type="button" class="choice" data-yn="yes" aria-pressed="false">Yes</button><button type="button" class="choice" data-yn="no" aria-pressed="false">No</button></div>
+            <div class="res go" data-res="yes" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Let’s Chad!</strong><p>We’re a dream team.</p></div>
+            <div class="res stop" data-res="no" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-stop"/></svg>Let’s not Chad yet.</strong><p>Hard stop! Don’t hit send. You’ve gotta do the human part.</p></div>
+          </div>
+        </li>
+        <li data-pass="yes">
+          <span class="node" aria-hidden="true">5</span>
+          <div class="step-card">
+            <h2>Step 5: Does it meet company standards?</h2>
+            <p class="label">Ask yourself:</p>
+            <ul class="ask"><li>Is it original, not copied?</li><li>Does it reflect your company’s values and tone?</li><li>Would you show it to your boss—or your boss’s boss?</li></ul>
+            <div class="yn" role="group" aria-label="Step 5: does it meet company standards?"><button type="button" class="choice" data-yn="yes" aria-pressed="false">Yes</button><button type="button" class="choice" data-yn="no" aria-pressed="false">No</button></div>
+            <div class="res go" data-res="yes" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Let’s Chad!</strong><p>Proceed with confidence.</p></div>
+            <div class="res stop" data-res="no" hidden><strong><svg class="ic" aria-hidden="true"><use href="#i-stop"/></svg>Let’s not Chad yet.</strong><p>Take a minute to revise.</p></div>
+          </div>
+        </li>
+      </ol>
+      <p class="feedback" data-flow-summary hidden tabindex="-1"></p>
+      <div class="btn-row" data-flow-reset hidden><button type="button" class="btn btn-secondary">Walk through it again</button></div>
+
+      <div class="card remember">
+        <h2>When using ChatGPT at work, remember to:</h2>
+        <ul>
+          <li>Never paste sensitive info</li>
+          <li>Use clear, specific prompts</li>
+          <li>Fact-check everything</li>
+          <li>Edit for brand and audience</li>
+          <li>Disclose AI use if required</li>
+          <li>Never use outputs for legal or regulated content</li>
+          <li>Report breaches ASAP</li>
+          <li>Stay up to date with your company’s AI policy</li>
+        </ul>
+        <div class="btn-row" style="margin-bottom:0">
+          <button type="button" class="btn btn-primary" data-print><svg class="ic" aria-hidden="true"><use href="#i-print"/></svg>Print the checklist</button>
+          <button type="button" class="btn btn-secondary" data-download><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Download the checklist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14. Knowledge check ============ -->
+<section class="screen" id="check" data-title="Knowledge Check">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/29 Okay, let’s do a vibe check._The responsible AI us...mp3" data-auto>
+      <div class="chad__img sq"><img src="images/7.png" alt="Chad, scratching his head" width="1080" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Okay, let’s do a vibe check—the responsible AI use kind. I’ll throw you a few workplace scenarios, and you pick the smarter move. No pressure. Just pretend your manager’s watching. Because they probably are.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">Knowledge check</p>
+      <h1 tabindex="-1">Vibe Check</h1>
+      <p class="instructions">Choose the most responsible approach in each situation. You’ll get feedback right away.</p>
+      <div data-quiz>
+        <fieldset class="quiz-q" data-explain="Confidential data doesn’t belong in ChatGPT. Strip it out first—or don’t use ChatGPT for this one.">
+          <legend><span class="qnum">Question 1 of 4</span>You’re revising a project update that contains confidential data. What do you do?</legend>
+          <div class="choices">
+            <button type="button" class="choice"><span class="letter" aria-hidden="true">A</span><span class="text">Paste the entire text into ChatGPT</span><span class="tag"></span></button>
+            <button type="button" class="choice" data-correct><span class="letter" aria-hidden="true">B</span><span class="text">Remove the confidential parts before using ChatGPT</span><span class="tag"></span></button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="quiz-q" data-explain="A draft is a starting point. Check it for accuracy and tailor it to your company’s voice and your audience.">
+          <legend><span class="qnum">Question 2 of 4</span>ChatGPT drafts a team announcement for you. What do you do?</legend>
+          <div class="choices">
+            <button type="button" class="choice"><span class="letter" aria-hidden="true">A</span><span class="text">Use it as-is—ChatGPT is good at writing drafts</span><span class="tag"></span></button>
+            <button type="button" class="choice" data-correct><span class="letter" aria-hidden="true">B</span><span class="text">Review it and tailor it to your company and audience</span><span class="tag"></span></button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="quiz-q" data-explain="Visuals carry your message and your brand. Refine the prompt or edit the image until it fits.">
+          <legend><span class="qnum">Question 3 of 4</span>The AI image for your slide looks generic and doesn’t fit your brand. What do you do?</legend>
+          <div class="choices">
+            <button type="button" class="choice" data-correct><span class="letter" aria-hidden="true">A</span><span class="text">Refine the prompt or edit the image for brand fit</span><span class="tag"></span></button>
+            <button type="button" class="choice"><span class="letter" aria-hidden="true">B</span><span class="text">Use it anyway and focus on the content instead</span><span class="tag"></span></button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="quiz-q" data-explain="Support tickets are full of customer names and details. Anonymize or summarize the data before it goes anywhere near ChatGPT.">
+          <legend><span class="qnum">Question 4 of 4</span>You’re asked to use ChatGPT to summarize support ticket data. What do you do?</legend>
+          <div class="choices">
+            <button type="button" class="choice"><span class="letter" aria-hidden="true">A</span><span class="text">Paste the spreadsheet as-is, so the data stays accurate</span><span class="tag"></span></button>
+            <button type="button" class="choice" data-correct><span class="letter" aria-hidden="true">B</span><span class="text">Anonymize or summarize the data before using ChatGPT</span><span class="tag"></span></button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset>
+      </div>
+
+      <div class="card" id="quiz-result" hidden tabindex="-1">
+        <h2>What did we learn?</h2>
+        <p class="score" data-score></p>
+        <figure class="chad chad--inline" data-role="quiz-win" data-clip="narration/32 You’ve got real instincts!__You’ve handled ChatGPT...mp3" hidden>
+          <div class="chad__img"><img src="images/Limited%20Cropped/Clap.png" alt="Chad, clapping and smiling" width="727" height="1080"></div>
+          <figcaption class="bubble"><p class="bubble__who">Chad</p><p>You’ve got real instincts! You’ve handled ChatGPT dilemmas like a total pro! Remember: I’m here to support your workflow, not override your judgment. Keep that review button close and your privacy settings closer!</p></figcaption>
+        </figure>
+        <figure class="chad chad--inline" data-role="quiz-retry" hidden>
+          <div class="chad__img"><img src="images/Limited%20Cropped/Think.png" alt="Chad, hand on chin, thinking" width="727" height="1080"></div>
+          <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Not bad for a warm-up! Read the feedback on the ones you missed, then give it another shot. I’ll wait. (I’m very patient. I’m software.)</p></figcaption>
+        </figure>
+        <h3>Chad’s do’s, don’ts, and chill notes</h3>
+        <ul>
+          <li>Review everything</li>
+          <li>Don’t share private stuff</li>
+          <li>Humanize your content</li>
+          <li>Ask when unsure</li>
+        </ul>
+        <div class="btn-row" style="margin-bottom:0">
+          <button type="button" class="btn btn-secondary" data-quiz-reset><svg class="ic" aria-hidden="true"><use href="#i-replay"/></svg>Retake the vibe check</button>
+          <button type="button" class="btn btn-cta" data-next>Final tips <svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15. Final tips ============ -->
+<section class="screen" id="final" data-title="Final Tips">
+  <div class="layout">
+    <figure class="chad" data-clip="narration/33 Thanks for letting me tag along at work today! I’l...mp3" data-auto>
+      <div class="chad__img"><img src="images/Limited%20Cropped/Wave%205.png" alt="Chad, waving goodbye with a normal five-fingered hand" width="727" height="1080"></div>
+      <figcaption class="bubble"><p class="bubble__who">Chad</p><p>Thanks for letting me tag along at work today! I’ll be in the background. I’m fast, helpful, and definitely not plotting to take your job.</p></figcaption>
+    </figure>
+    <div class="content">
+      <p class="eyebrow">Wrap-up</p>
+      <h1 tabindex="-1">Final Tips</h1>
+      <p class="lead">You made it through the day. Before you go, make the habits your own.</p>
+      <div class="card">
+        <h2 id="commit-h">My responsible-AI checklist</h2>
+        <p class="label" style="margin-top:-.25em">Check the habits you’ll commit to.</p>
+        <ul class="checklist" aria-labelledby="commit-h" data-commit>
+          <li><label><input type="checkbox" value="I keep sensitive info out of my prompts—or anonymize it first."> I keep sensitive info out of my prompts—or anonymize it first.</label></li>
+          <li><label><input type="checkbox" value="I write clear, specific prompts with a goal and an audience."> I write clear, specific prompts with a goal and an audience.</label></li>
+          <li><label><input type="checkbox" value="I fact-check every stat, quote, and claim."> I fact-check every stat, quote, and claim.</label></li>
+          <li><label><input type="checkbox" value="I edit AI drafts to match my team’s voice."> I edit AI drafts to match my team’s voice.</label></li>
+          <li><label><input type="checkbox" value="I check AI images for inclusion and brand fit."> I check AI images for inclusion and brand fit.</label></li>
+          <li><label><input type="checkbox" value="I ask when I’m unsure, and follow my company’s AI policy."> I ask when I’m unsure, and follow my company’s AI policy.</label></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Personal reflection</h2>
+        <label class="field-label" for="reflection">Where will you use ChatGPT this week, and what’s one thing you’ll double-check before you hit send?</label>
+        <span class="hint" id="reflection-hint">Saved automatically in this browser only. Nobody else sees it.</span>
+        <textarea id="reflection" aria-describedby="reflection-hint"></textarea>
+        <div class="btn-row" style="margin-bottom:0">
+          <button type="button" class="btn btn-primary" data-print><svg class="ic" aria-hidden="true"><use href="#i-print"/></svg>Print my checklist</button>
+          <button type="button" class="btn btn-secondary" data-download><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Download my checklist</button>
+        </div>
+      </div>
+      <div class="callout callout--green"><p><strong>Course complete.</strong> You’ve finished Responsible ChatGPT Use at Work. Want another lap? <button type="button" class="linkish" style="margin:0" data-restart>Start over from the beginning</button></p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<nav class="pager" aria-label="Screens">
+  <button type="button" class="btn btn-secondary" id="prev"><svg class="ic" aria-hidden="true"><use href="#i-arrow-l"/></svg>Back</button>
+  <p class="pager__count" id="count" aria-live="polite">Screen 1 of 15</p>
+  <button type="button" class="btn btn-cta" id="next">Next<svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+</nav>
+
+<dialog class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="menu__head">
+    <h2 id="menu-title">Course menu</h2>
+    <button type="button" class="icon-btn" id="menu-close" aria-label="Close menu"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <nav aria-label="All screens"><ol id="menu-list"></ol></nav>
+</dialog>
+
+<div id="announcer" class="visually-hidden" aria-live="polite"></div>
+<div id="print-area"></div>
+<audio id="narrator" preload="none"></audio>
+
+<script src="course.js?v=3"></script>
+</body>
+</html>
